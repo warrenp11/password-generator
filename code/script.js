@@ -19,18 +19,45 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 // **************************************************************************** //
 */
+// ***********************
+// Assignment code 
+// ***********************
 
-// Assignment code here
-var lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-var uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-//var specialCharacters = [];
-var passwordLength = "";
+// arrays to choose characters from
+var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+var specialChar = ['!', '%', '&', ',', '*', '+', '-', '.', '/', '<', '>', '?','~'];
 
-var generatePassword = function() {
-  window.prompt("Please select the length of your password. (Between 8 - 128 characters");
-};
+// prompt to confirm length of password (between 8-128)
+function generatePassword() {
+  var confirmLength = window.prompt(
+    "How many characters would you like your password to contain? (between 8-128)"
+  );
 
+  // if answer is less than 8 or more than 128
+  while(confirmLength < 8 || confirmLength > 128) {
+    window.alert(
+      "Password length must be between 8-128 characters. Please choose again."
+    );
+    var confirmLength = window.prompt(
+      "How many characters would you like your password to contain? (between 8-128)"
+    );
+  }
+
+  var confirmLowerCase = window.confirm(
+    "Click OK if you would you like your password to include lowercase characters."
+    );
+  var confirmUpperCase = window.confirm(
+    "Click OK if you would you like your password to include uppercase characters."
+    );
+  var confirmNumber = window.confirm(
+    "Click OK if you would you like your password to include numbers."
+    );
+  var confirmSpecialChar = window.confirm(
+    "Click OK if you would you like your password to include special characters."
+    );
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
