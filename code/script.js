@@ -29,6 +29,9 @@ var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'
 var number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialChar = ['!', '%', '&', ',', '*', '+', '-', '.', '/', '<', '>', '?','~'];
 
+var passwordChar = [];
+
+
 // prompt to confirm length of password (between 8-128)
 function generatePassword() {
   var confirmLength = window.prompt(
@@ -45,6 +48,7 @@ function generatePassword() {
     );
   }
 
+  // confirm which characters to use in pasword
   var confirmLowerCase = window.confirm(
     "Click OK if you would you like your password to include lowercase characters."
     );
@@ -57,7 +61,57 @@ function generatePassword() {
   var confirmSpecialChar = window.confirm(
     "Click OK if you would you like your password to include special characters."
     );
+  
+  // if no character parameters are chosen
+  while (confirmLowerCase === false && confirmUpperCase === false && confirmNumber === false && confirmSpecialChar === false) {
+    window.alert("You must choose at least one parameter. Please choose again.");
+    // reloop through choices
+    var confirmLowerCase = window.confirm(
+      "Click OK if you would you like your password to include lowercase characters."
+      );
+    var confirmUpperCase = window.confirm(
+      "Click OK if you would you like your password to include uppercase characters."
+      );
+    var confirmNumber = window.confirm(
+      "Click OK if you would you like your password to include numbers."
+      );
+    var confirmSpecialChar = window.confirm(
+      "Click OK if you would you like your password to include special characters."
+      );
+  }
+
+  var passwordChar = [];
+
+  if (confirmLowerCase) {
+    passwordChar += lowercase;
+  }
+  if (confirmUpperCase) {
+    passwordChar += uppercase;
+  }
+  if (confirmNumber) {
+    passwordChar += number;
+  }
+  if (confirmSpecialChar) {
+    passwordChar += specialChar;
+  }
+
+  console.log(passwordChar);
+
+  var randomPassword = "";
+
+  for (var i = 0; i < confirmLength; i++) {
+    randomPassword = randomPassword + passwordChar(Math.floor(Math.random) * passwordChar.length)
+    console.log(randomPassword);
+  }
+  return randomPassword;
+
 }
+
+
+// ***************************************
+// !!!!! DO NOT CODE BELOW HERE !!!!!!!!
+// ***************************************
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
