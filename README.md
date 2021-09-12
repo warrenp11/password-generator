@@ -30,15 +30,15 @@ The project has:
 
 ## Screenshot
 The loading page for the password generator, before clicking "Generate Password" button
-![Blank Password Generator](/Screenshot-01.png "Blank Password Generator")
+![Blank Password Generator](/images/Screenshot-01.png "Blank Password Generator")
 
-![Prompt asking user for desired password length](/prompt-01.png "Password Length Prompt")
+![Prompt asking user for desired password length](/images/prompt-01.png "Password Length Prompt")
 
-![Alert user that password must be between 8-128 characters](/prompt-02.png "Password Length Alert")
+![Alert user that password must be between 8-128 characters](/images/prompt-02.png "Password Length Alert")
 
-![Prompt asking user which characters to use](/prompt-03.png "Password Characters Prompt")
+![Prompt asking user which characters to use](/images/prompt-03.png "Password Characters Prompt")
 
-![Alert user that password must choose at least 1 set of characters](/prompt-04.png "Password Characters Alert")
+![Alert user that password must choose at least 1 set of characters](/images/prompt-04.png "Password Characters Alert")
 
 
 ## Installation
