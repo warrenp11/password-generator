@@ -73,7 +73,7 @@ function generatePassword() {
 }
 
 
-function password(l, passwordChar) {
+function writePassword(l, passwordChar) {
     var randomPassword = "";
     for (var i =0; i < l; i++) {
       randomPassword += passwordChar.charAt(Math.floor(Math.random() * passwordChar.lenth));
