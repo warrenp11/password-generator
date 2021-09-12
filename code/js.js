@@ -32,8 +32,9 @@ function generatePassword() {
 
     // Repeat back to user how many characters they've selected to use
     window.alert("Your password will have " + confirmLength + " characters")
-    // *** Another way I was shown to display same message above ***
-    // window.alert(`Your password will have ${confirmLength} charcters`);
+    
+    /*Another way I was shown to display same message above
+    window.alert(`Your password will have ${confirmLength} charcters`); */
 
     // Determine which characters to use in password
     var confirmLowercase = window.confirm("Click OK to confirm if you'd like to include lowercase characters");
@@ -51,12 +52,34 @@ function generatePassword() {
             var confirmSpecialCharacter = window.confirm("Click OK to confirm if you'd like to include special characters");
         }
 
-            var passwordChar
+            // Empty array to add all characters user has chosen to use for password
+            var passwordCharacters = [];
+
+            // IF statements to add chosen characters to empty passwordCharacters array
+            if (confirmLowercase) {
+                passwordCharacters = passwordCharacters.concat(lowercase)
+            }
+            if (confirmUppercase) {
+                passwordCharacters = passwordCharacters.concat(uppercase)
+            }
+            if (confirmNumber) {
+                passwordCharacters = passwordCharacters.concat(number)
+            }
+            if (confirmSpecialCharacter) {
+                passwordCharacters = passwordCharacters.concat(specialCharacter)
+            }
+            //console.log(passwordCharacters);
+
+                // Choosing random selection of characters from passwordCharacters array
+                var randomPassword = "";
+                
+                for (var i = 0; i < confirmLength; i++) {
+                    randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+                    //console.log(randomPassword);
+                }
+                
+                return randomPassword;
 }
-
-
-
-
 
 
 // Get references to the #generate element
