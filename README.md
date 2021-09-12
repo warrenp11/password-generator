@@ -28,22 +28,6 @@ The project has:
 * THEN the password is either displayed in an alert or written to the page
 
 ## Screenshot
-<<<<<<< HEAD
-The loading page for the password generator, before clicking "Generate Password" button
-![Blank Password Generator](/images/Screenshot-01.png "Blank Password Generator")
-
-Prompt asking user for desired password length
-![Prompt asking user for desired password length](/images/prompt-01.png "Password Length Prompt")
-
-Alert user that password must be between 8-128 characters
-![Alert user that password must be between 8-128 characters](/images/prompt-02.png "Password Length Alert")
-
-Prompt asking user which characters to use
-![Prompt asking user which characters to use](/images/prompt-03.png "Password Characters Prompt")
-
-Alert user that password must choose at least 1 set of characters
-![Alert user that password must choose at least 1 set of characters](/images/prompt-04.png "Password Characters Alert")
-=======
 The home page for the password generator, before clicking "Generate Password" button
 ![Blank Password Generator](./assets/images/Screenshot-01.png "Blank Password Generator")
 
@@ -65,7 +49,6 @@ The final result, a randomly generated password with the user's specified length
 
 ## Project Insight
 It helped to pseudocode my way through the project. I found that when I did use pseudocoding it was easier to keep track of my thoughts and where my coding was leading to. That being said, the actual coding presented several problems for me.
->>>>>>> develop
 
 Where I had the most trouble was figuring out how to add all the user's selected characters and then randomly output a selection of those characters for the password. Eventually (after much trial and error, and lots of researching online) I was able to use the concat.() method to concatenate a random string of characters to use. It also took me time to debug my FOR loop. I was repeatedly getting on error message stating "passwordCharacters is not a function" and I couldn't generate a random password to the browser. It took some time but I was able to figure out that in order for my code to work I needed to change line77 from "passwordCharacters(Math.floor(Math.random() * passwordCharacters.length))" to what it is now -- "passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)]" -- an array not a function. 
 
