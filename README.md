@@ -28,6 +28,9 @@ The project has:
 * A series of prompts that asks the user what criteria they'd like to have for their password (password length and characters to use)
 * After the user has selected which criteria to use in their password, a random password is generated and displayed in the text area of the password generator
 
+## Screenshot
+
+
 ## Installation
 To execute this file, open in a browser
 
