@@ -65,13 +65,8 @@ No installation required. To execute this file, open in a browser
     * Contains variables and functions to execute the random password generation
 
 ## Links To Live Project
-<<<<<<< HEAD
 * GitHub Repository: https://github.com/warrenp11/password-generator
 * GitHub IO: https://warrenp11.github.io/password-generator/
-=======
-* GitHub Repository: 
-* GitHub IO: 
->>>>>>> develop
 
 ## Author
 Peter Warren
