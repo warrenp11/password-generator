@@ -32,12 +32,16 @@ The project has:
 The loading page for the password generator, before clicking "Generate Password" button
 ![Blank Password Generator](/images/Screenshot-01.png "Blank Password Generator")
 
+Prompt asking user for desired password length
 ![Prompt asking user for desired password length](/images/prompt-01.png "Password Length Prompt")
 
+Alert user that password must be between 8-128 characters
 ![Alert user that password must be between 8-128 characters](/images/prompt-02.png "Password Length Alert")
 
+Prompt asking user which characters to use
 ![Prompt asking user which characters to use](/images/prompt-03.png "Password Characters Prompt")
 
+Alert user that password must choose at least 1 set of characters
 ![Alert user that password must choose at least 1 set of characters](/images/prompt-04.png "Password Characters Alert")
 
 
@@ -54,8 +58,8 @@ To execute this file, open in a browser
     * Contains variables and functions to execute the random password generation
 
 ## Links To Live Project
-* GitHub Repository:
-* GitHub IO: 
+* GitHub Repository: https://github.com/warrenp11/password-generator
+* GitHub IO: https://warrenp11.github.io/password-generator/
 
 ## Author
 Peter Warren
