@@ -29,6 +29,16 @@ The project has:
 * After the user has selected which criteria to use in their password, a random password is generated and displayed in the text area of the password generator
 
 ## Screenshot
+The loading page for the password generator, before clicking "Generate Password" button
+![Blank Password Generator](/Screenshot-01.png "Blank Password Generator")
+
+![Prompt asking user for desired password length](/prompt-01.png "Password Length Prompt")
+
+![Alert user that password must be between 8-128 characters](/prompt-02.png "Password Length Alert")
+
+![Prompt asking user which characters to use](/prompt-03.png "Password Characters Prompt")
+
+![Alert user that password must choose at least 1 set of characters](/prompt-04.png "Password Characters Alert")
 
 
 ## Installation
